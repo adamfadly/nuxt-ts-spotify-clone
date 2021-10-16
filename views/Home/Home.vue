@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>Home</p>
+  <div class="bg-black h-screen w-full">
+    <p class="text-green">home</p>
   </div>
 </template>
 
@@ -9,3 +9,5 @@ import Vue from 'vue'
 
 export default Vue.extend({})
 </script>
+
+<style scoped></style>
