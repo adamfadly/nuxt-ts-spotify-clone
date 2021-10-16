@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ name }}
+    <p class="text-4xl text-green-400">LOGIN</p>
   </div>
 </template>
 
