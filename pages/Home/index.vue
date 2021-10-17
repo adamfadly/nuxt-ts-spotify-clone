@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-black w-full h-screen">
     <Home />
   </div>
 </template>
@@ -9,9 +9,7 @@ import Vue from 'vue'
 import Home from '~/views/Home/Home.vue'
 
 export default Vue.extend({
-  components: {
-    Home,
-  },
+  components: { Home },
 })
 </script>
 
