@@ -1,13 +1,16 @@
 <template>
   <div class="bg-black h-screen w-full">
-    <p class="text-green">home</p>
+    <LeftNavbar />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import LeftNavbar from '~/components/Navbar/LeftNavbar.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { LeftNavbar },
+})
 </script>
 
 <style scoped></style>
