@@ -40,8 +40,10 @@ vbase
         <p class="text-white text-lg font-normal py-2 pl-3">Liked Songs</p>
       </div>
       <div class="flex items-center">
-        <SearchIcon class="text-white w-6 h-6" />
-        <p class="text-white text-lg font-normal py-2 pl-3">Search</p>
+        <PodcastIcon
+          class="text-green w-6 h-6 bg-green bg-opacity-50 rounded-sm p-1"
+        />
+        <p class="text-white text-lg font-normal py-2 pl-3">Your Episode</p>
       </div>
     </div>
     <hr class="bg-gray-300 mx-6" />
@@ -64,6 +66,7 @@ import LibraryIcon from '~/assets/icon/HeroIcons/LibraryIcon.vue'
 import SearchIcon from '~/assets/icon/HeroIcons/SearchIcon.vue'
 import PlusIcon from '~/assets/icon/HeroIcons/PlusIcon.vue'
 import LoveIcon from '~/assets/icon/HeroIcons/LoveIcon.vue'
+import PodcastIcon from '~/assets/icon/HeroIcons/PodcastIcon.vue'
 import ArrowDownIcon from '~/assets/icon/HeroIcons/ArrowDownIcon.vue'
 
 export default Vue.extend({
@@ -73,6 +76,7 @@ export default Vue.extend({
     SearchIcon,
     PlusIcon,
     LoveIcon,
+    PodcastIcon,
     ArrowDownIcon,
   },
 })
