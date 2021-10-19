@@ -7,22 +7,16 @@ vbase
       alt=""
     />
     <div class="flex flex-col py-1 px-6">
-      <nuxt-link to="/home">
-        <div class="flex items-center">
-          <HomeIcon class="w-6 h-6" />
-          <p class="text-lg font-normal py-2 pl-3">Home</p>
-        </div>
-      </nuxt-link>
-      <nuxt-link to="/library">
-        <div class="flex items-center">
-          <LibraryIcon class="w-6 h-6" />
-          <p class="text-lg font-normal py-2 pl-3">Library</p>
-        </div>
-      </nuxt-link>
-      <nuxt-link to="/search">
-        <div class="flex items-center">
-          <SearchIcon class="w-6 h-6" />
-          <p class="text-lg font-normal py-2 pl-3">Search</p>
+      <nuxt-link
+        v-for="(item, index) in navLinks"
+        :key="index"
+        :class="item.class"
+        :to="item.link"
+      >
+        <div class="flex items-center" @click="onActive(index)">
+          <!-- <HomeIcon class="w-6 h-6" /> -->
+          <component :is="item.icon" class="w-6 h-6"></component>
+          <p class="text-lg font-normal py-2 pl-3">{{ item.title }}</p>
         </div>
       </nuxt-link>
     </div>
@@ -74,6 +68,46 @@ export default Vue.extend({
     LoveIcon,
     PodcastIcon,
     ArrowDownIcon,
+  },
+  data() {
+    return {
+      navLinks: [
+        {
+          link: '',
+          title: 'Home',
+          icon: 'HomeIcon',
+          class: 'bg-gray',
+        },
+        {
+          link: '',
+          title: 'Library',
+          icon: 'LibraryIcon',
+          class: '',
+        },
+        {
+          link: '',
+          title: 'Search',
+          icon: 'SearchIcon',
+          class: '',
+        },
+      ],
+      active: false,
+      activeNaV: '',
+      current: 0,
+    }
+  },
+  methods: {
+    onActive(index: number) {
+      if (index !== this.current) {
+        this.navLinks[index].class = 'bg-gray'
+        this.navLinks.forEach((item, idx) => {
+          if (index !== idx) {
+            item.class = ''
+          }
+        })
+        this.current = index
+      }
+    },
   },
 })
 </script>
