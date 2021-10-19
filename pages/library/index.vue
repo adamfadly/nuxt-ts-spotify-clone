@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray w-full h-screen">this home</div>
+  <div>this is library</div>
 </template>
 
 <script lang="ts">
