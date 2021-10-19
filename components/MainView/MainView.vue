@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-gray w-full h-screen">this home</div>
+  <div class="bg-gray w-full h-screen overflow-y-auto">
+    <Nuxt />
+  </div>
 </template>
 
 <script lang="ts">
