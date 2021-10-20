@@ -1,15 +1,13 @@
 <template>
-  <div class="bg-black w-full h-screen">
-    <Home />
-  </div>
+  <div class="bg-black w-full h-screen">ini bisa</div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Home from '~/views/Home/Home.vue'
 
 export default Vue.extend({
-  components: { Home },
+  components: {},
+  layout: 'mainView',
 })
 </script>
 
