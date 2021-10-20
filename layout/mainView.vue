@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-gray w-full h-screen overflow-y-auto">
+  <div class="bg-black h-screen w-full flex">
+    <LeftNavbar />
     <Nuxt />
   </div>
 </template>
@@ -9,5 +10,3 @@ import Vue from 'vue'
 
 export default Vue.extend({})
 </script>
-
-<style scoped></style>

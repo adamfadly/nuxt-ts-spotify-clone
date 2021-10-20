@@ -73,19 +73,19 @@ export default Vue.extend({
     return {
       navLinks: [
         {
-          link: '',
+          link: '/home',
           title: 'Home',
           icon: 'HomeIcon',
           class: 'bg-gray',
         },
         {
-          link: '',
+          link: '/library',
           title: 'Library',
           icon: 'LibraryIcon',
           class: '',
         },
         {
-          link: '',
+          link: '/search',
           title: 'Search',
           icon: 'SearchIcon',
           class: '',
