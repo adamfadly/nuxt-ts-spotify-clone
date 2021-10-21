@@ -4,10 +4,24 @@
       <div class="flex items-center justify-between px-4">
         <div class="flex items-center">
           <chevron-left
-            class="bg-black opacity-100 rounded-full mx-1"
+            class="
+              bg-black bg-opacity-50
+              rounded-full
+              mx-1
+              w-7
+              h-7
+              hover:bg-opacity-100
+            "
           ></chevron-left>
           <chevron-right
-            class="bg-black bg-opacity-100 rounded-full mx-1"
+            class="
+              bg-black bg-opacity-50
+              rounded-full
+              mx-1
+              w-7
+              h-7
+              hover:bg-opacity-100
+            "
           ></chevron-right>
         </div>
         <div @click="onUserAccount">
@@ -20,6 +34,7 @@
               p-1
               rounded-full
               cursor-pointer
+              hover:bg-gray
             "
           >
             <div class="pr-1">
@@ -31,6 +46,7 @@
             </div>
             <div class="text-xs font-medium px-2">Mocha Adam Fadly</div>
             <chevron-right
+              class="p-1"
               :class="dropDown ? 'transform rotate-90' : 'transform -rotate-90'"
             >
             </chevron-right>
@@ -50,7 +66,7 @@
           >
             <div class="flex justify-between">
               <div>account</div>
-              <log-out></log-out>
+              <log-out class="p-1"></log-out>
             </div>
             <div class="">profile</div>
             <div class="">logout</div>
@@ -75,11 +91,11 @@ export default Vue.extend({
   },
   data() {
     return {
-      dropDown: true,
+      dropDown: false,
     }
   },
   methods: {
-    onUserAccount() {
+    onUserAccount(): void {
       this.dropDown = !this.dropDown
     },
   },
