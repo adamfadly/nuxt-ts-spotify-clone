@@ -7,6 +7,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import LeftNavbar from '~/components/Navbar/LeftNavbar.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: {
+    LeftNavbar,
+  },
+})
 </script>
